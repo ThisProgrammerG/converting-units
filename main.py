@@ -7,7 +7,7 @@ feet = {
 
 units.setdefault('feet', {}).update(feet)
 
-def convert_units(amount, from_unit, to_unit):
+def convert_units(amount: int | float, from_unit: str, to_unit: str) -> int | float:
     if from_unit in units and to_unit in units[from_unit]:
         return amount * units[from_unit][to_unit]
     elif to_unit in units and from_unit in units[to_unit]:
